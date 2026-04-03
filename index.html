@@ -14,15 +14,15 @@
     
     <style>
         :root {
-            /* --- 顏色設定 (依照要求交換配色) --- */
-            --primary-color: #BCE1DF; /* 薄水色 (頁籤/重點) */
-            --accent-color: #F4DDDF;  /* 櫻色 (標題背景/筆記側邊) */
-            --light-blue: #BCE1DF;    /* 薄水色 (時間軸圖示) */
+            /* --- 顏色設定 (#e04370 主題色) --- */
+            --primary-color: #e04370; 
+            --accent-color: #F4DDDF;  /* 櫻色 */
+            --light-blue: #e04370;    
             --bg-color: #FDFBFA;      /* 極淺米白底色 */
             --card-bg: #FFFFFF;
             --text-main: #4E342E;     /* 深咖啡色文字 */
             --text-sub: #795548;      /* 淺咖啡色文字 */
-            --line-color: #BCE1DF;    /* 時間軸線條 */
+            --line-color: #e04370;    /* 時間軸線條 */
 
             /* --- 版面與字體大小設定 --- */
             --timeline-icon-size: 38px;
@@ -41,7 +41,6 @@
 
         h1, h2, h3, .serif-font {
             font-family: 'Shippori Mincho', serif;
-            color: var(--text-main);
         }
 
         .no-scrollbar::-webkit-scrollbar { display: none; }
@@ -56,19 +55,20 @@
             background-color: var(--line-color);
             z-index: 0;
             transform: translateX(-50%);
+            opacity: 0.2;
         }
         .last-item .timeline-line { display: none; }
 
         .tab-active {
-            background-color: var(--primary-color);
-            color: var(--text-main);
-            border-color: var(--primary-color);
+            background-color: white;
+            color: var(--primary-color);
             font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
         .tab-inactive {
-            background-color: white;
-            color: var(--text-sub);
-            border: 1px solid #e5e7eb;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
 
         .fade-in {
@@ -91,18 +91,18 @@
 <body class="h-screen flex flex-col overflow-hidden">
 
     <!-- 頂部標頭 -->
-    <header class="bg-white shadow-sm z-20 flex-none px-6 py-4 flex justify-between items-center" style="border-bottom: 4px solid var(--primary-color);">
+    <header class="shadow-md z-20 flex-none px-6 py-4 flex justify-between items-center" style="background-color: var(--primary-color);">
         <div>
-            <h1 class="text-xl font-bold tracking-widest" style="color: var(--text-main);">HOKKAIDO 2026</h1>
-            <p class="text-xs mt-1" style="color: var(--text-sub);">北海道・春綠與櫻花・五日自駕旅</p>
+            <h1 class="text-xl font-bold tracking-widest text-white">HOKKAIDO 2026</h1>
+            <p class="text-xs mt-1 text-white opacity-80">北海道・春綠與櫻花・五日自駕旅</p>
         </div>
         <div class="text-right">
-             <span id="header-date" class="text-sm font-medium" style="color: var(--text-main);">MAY 20 - 24</span>
+             <span id="header-date" class="text-sm font-medium text-white">MAY 20 - 24</span>
         </div>
     </header>
 
     <!-- 導航頁籤 -->
-    <nav class="bg-white z-10 flex-none py-3 overflow-x-auto no-scrollbar px-4 border-b border-gray-100">
+    <nav class="z-10 flex-none py-3 overflow-x-auto no-scrollbar px-4" style="background-color: var(--primary-color); border-top: 1px solid rgba(255,255,255,0.1);">
         <div class="flex space-x-3 min-w-max" id="tab-container">
             <!-- Tabs 將由 JavaScript 生成 -->
         </div>
@@ -116,9 +116,9 @@
 
         <!-- 亮點 & 筆記 (右側/僅桌面顯示) -->
         <div class="hidden md:flex md:w-1/2 lg:w-7/12 bg-white border-l border-gray-100 flex-col relative h-full">
-            <div id="hero-color-area" class="h-1/3 w-full flex-none p-8 flex flex-col justify-end transition-colors duration-500 rounded-bl-xl bg-[var(--accent-color)]">
-                <h2 id="hero-title" class="text-3xl font-bold serif-font mb-2">準備出發</h2>
-                <p id="hero-desc" class="text-sm leading-relaxed opacity-80">漫步在北海道的櫻花與綠意中，享受愜意的春日旅程。</p>
+            <div id="hero-color-area" class="h-1/3 w-full flex-none p-8 flex flex-col justify-end transition-colors duration-500 rounded-bl-xl bg-[var(--accent-color)]" style="background-color: var(--accent-color);">
+                <h2 id="hero-title" class="text-3xl font-bold serif-font mb-2 text-[#4E342E]">準備出發</h2>
+                <p id="hero-desc" class="text-sm leading-relaxed opacity-80 text-[#795548]">漫步在北海道的櫻花與綠意中，享受愜意的春日旅程。</p>
             </div>
             <div class="h-2/3 p-8 overflow-y-auto bg-white flex-1">
                 <h3 class="text-lg font-bold mb-4 border-b pb-2 border-gray-200" style="color: var(--text-main);">本日亮點 & 導遊筆記</h3>
@@ -140,10 +140,10 @@
                 guideNotes: "<p><strong>第一天提醒：</strong></p><ul><li><strong>取車：</strong>Times 租車在新千歲有專屬接駁區，請找尋 Times 旗幟。</li><li><strong>地獄谷：</strong>步道約 20-30 分鐘可走完，硫磺味較重。</li></ul>",
                 activities: [
                     { time: "02:30", icon: "fa-house", title: "台中出發", location: "台中", note: "搭乘機場接送前往桃園機場。" },
-                    { time: "06:20", icon: "fa-plane-departure", title: "桃園飛新千歲 (IT234)", location: "桃園機場", note: "預計 11:05 抵達。<br>機票代碼：DCJRPX" },
-                    { time: "12:00", icon: "fa-car", title: "Times 取車", location: "Times Car Rental 新千歲空港店", note: "MapCode: 113 831 657*71<br>辦理租車並設定導航。", link: "https://www.timescar-rental.com/zh_hk/hokkaido/shop/0101/" },
-                    { time: "下午", icon: "fa-mountain", title: "登別地獄谷", location: "登別地獄谷", note: "【特色】火山爆發後的奇觀，煙霧繚繞十分震撼。<br>MapCode: 603 287 021*23", link: "https://noboribetsu-spa.jp/spot/spot0001/", image: "https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=1000&auto=format&fit=crop" },
-                    { time: "住宿", icon: "fa-bed", title: "第一滝本館", location: "第一滝本館", note: "房型：西館和室。<br>【推薦】擁有超大溫泉浴場及豪華自助餐。<br>MapCode: 603 287 114*74", link: "https://takimotokan.jp/" }
+                    { time: "06:20", icon: "fa-plane-departure", title: "桃園飛新千歲 (IT234)", location: "桃園機場", note: "預計 11:05 抵達。" },
+                    { time: "12:00", icon: "fa-car", title: "Budget 取車", location: "Budget Rent a Car新千歲空港店", note: "MapCode: 113 770 666*66<br>辦理租車並設定導航。", link: "https://www.budgetrentacar.co.jp/zh/shop/hokkaido/0700/" },
+                    { time: "下午", icon: "fa-mountain", title: "登別地獄谷", location: "登別地獄谷", note: "【特色】火山爆發後的奇觀，煙霧繚繞十分震撼。<br>MapCode: 603 287 021*23", link: "https://noboribetsu-spa.jp/", image: "https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=1000&auto=format&fit=crop" },
+                    { time: "住宿", icon: "fa-bed", title: "第一滝本館", location: "第一滝本館", note: "房型：西館和室。<br>【推薦】擁有超大溫泉浴場及豪華自助餐。<br>MapCode: 603 287 114*74", link: "https://takimotokan.co.jp/ja/" }
                 ]
             },
             {
@@ -151,13 +151,15 @@
                 date: "2026-05-21",
                 title: "洞爺湖絕景・有珠山展望",
                 summary: "欣賞清幽神社，搭乘纜車遠眺羊蹄山與洞爺湖全景。",
-                guideNotes: "<p><strong>第二天提醒：</strong></p><ul><li><strong>有珠山：</strong>纜車上升時視野極佳，可看見昭和新山。</li><li><strong>烤羊肉：</strong>Loft Club 的成吉思汗烤肉非常有名，建議提早抵達。</li></ul>",
+                guideNotes: "<p><strong>第二天提醒：</strong></p><ul><li><strong>有珠山：</strong>纜車上升時視野極佳，可看見昭和新山。</li><li><strong>烤羊肉：</strong>Loft Club 的成吉思汗烤肉非常有名，已訂位。</li></ul>",
                 activities: [
                     { time: "上午", icon: "fa-torii-gate", title: "伊達神社", location: "伊達神社", note: "氛圍寧靜祥和的神社。<br>MapCode: 346 130 081*55" },
-                    { time: "上午", icon: "fa-cable-car", title: "有珠山纜車", location: "有珠山纜車", note: "【特色】俯瞰洞爺湖全景。山頂可走至火口展望台。<br>MapCode: 321 433 350*55", link: "https://www.usuzan.jp/", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop" },
+                    { time: "上午", icon: "fa-cable-car", title: "有珠山纜車", location: "有珠山纜車", note: "【特色】俯瞰洞爺湖全景。山頂可走至火口展望台。<br>MapCode: 321 433 350*55", link: "https://usuzan.hokkaido.jp/ja/", image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop" },
+                    { time: "上午", icon: "fa-torii-gate", title: "虻田神社", location: "虻田神社", note: "北海道數一數二的能量景點。<br>MapCode: 321 025 829*03" },
                     { time: "中午", icon: "fa-ice-cream", title: "Lake Hill Farm", location: "Lake Hill Farm", note: "【必吃】超人氣義式冰淇淋與泡芙。<br>MapCode: 321 694 504*32", link: "https://www.lake-hill.com/" },
                     { time: "下午", icon: "fa-camera", title: "洞爺湖筒倉展望台", location: "Silo Observatory", note: "眺望洞爺湖的最佳攝影點。<br>MapCode: 321 726 761*12" },
-                    { time: "晚餐", icon: "fa-fire-burner", title: "成吉思汗烤羊肉", location: "Niseko Loft Club", note: "【必吃】炭火直燒生羊肉，完全沒羶味。<br>MapCode: 398 231 615*00", link: "https://loftclub-niseko.com/" }
+                    { time: "晚餐", icon: "fa-fire-burner", title: "成吉思汗烤羊肉", location: "Niseko Loft Club", note: "【必吃】炭火直燒生羊肉，完全沒羶味。<br>MapCode: 398 231 615*00", link: "https://loftclub1989.com/" },
+                    { time: "住宿", icon: "fa-bed", title: "甘露之森", location: "Hotel KANRONOMORI", note: "房型：雙床房+塌塌米區<br>MapCode: 398 387 114*63", link: "http://www.kanronomori.com/" }
                 ]
             },
             {
@@ -167,11 +169,11 @@
                 summary: "在二世古品嚐香濃乳製品，欣賞粉色芝櫻花海，入住定山溪溫泉。",
                 guideNotes: "<p><strong>第三天提醒：</strong></p><ul><li><strong>三島芝櫻：</strong>此為私房景點，請務必安靜參觀、保持環境整潔。</li><li><strong>望羊中山：</strong>一定要吃看看「炸馬鈴薯」，是北海道必買點心。</li></ul>",
                 activities: [
-                    { time: "上午", icon: "fa-cow", title: "二世古高橋牧場", location: "二世古高橋牧場", note: "【特色】以羊蹄山為背景的廣大牧場。<br>【必喝】新鮮優格與鮮奶。<br>MapCode: 398 355 491*22", link: "https://niseko-takahashi.jp/" },
-                    { time: "上午", icon: "fa-leaf", title: "三島さんの芝ざくら庭園", location: "三島芝櫻庭園", note: "【特色】私人打造的粉紅色地毯，五月盛開美不勝收。<br>MapCode: 398 440 376*55", image: "https://images.unsplash.com/photo-1541014569566-d98c2ca8388b?q=80&w=1000&auto=format&fit=crop" },
-                    { time: "中午", icon: "fa-mountain-sun", title: "道の駅 望羊中山", location: "望羊中山", note: "【必吃】中山峠名產炸馬鈴薯。<br>MapCode: 433 111 639*23" },
-                    { time: "下午", icon: "fa-tree", title: "小金湯さくらの森", location: "小金湯櫻之森", note: "【特色】在靜謐的林間散步，放鬆心情。<br>MapCode: 708 693 831*22" },
-                    { time: "住宿", icon: "fa-hot-tub-person", title: "定山溪萬世閣", location: "定山溪萬世閣酒店", note: "【特色】定山溪老牌名店，享受溪谷溫泉。<br>MapCode: 708 755 281*88", link: "https://www.milione.jp/" }
+                    { time: "上午", icon: "fa-cow", title: "二世古高橋牧場", location: "二世古高橋牧場", note: "【特色】以羊蹄山為背景的廣大牧場。<br>【必喝】新鮮優格與鮮奶。<br>MapCode: 398 321 075*21", link: "https://www.niseko-takahashi.jp/" },
+                    { time: "上午", icon: "fa-leaf", title: "三島さんの芝ざくら庭園", location: "三島芝櫻庭園", note: "【特色】私人打造的粉紅色地毯，五月盛開美不勝收。<br>MapCode: 398 569 607*54", image: "https://images.unsplash.com/photo-1541014569566-d98c2ca8388b?q=80&w=1000&auto=format&fit=crop" },
+                    { time: "中午", icon: "fa-mountain-sun", title: "道の駅 望羊中山", location: "望羊中山", note: "【必吃】中山峠名產炸馬鈴薯。<br>MapCode: 759 672 331*28" },
+                    { time: "下午", icon: "fa-tree", title: "小金湯さくらの森", location: "小金湯櫻之森", note: "【特色】在靜謐的林間散步，放鬆心情。<br>MapCode: 708 761 501*07" },
+                    { time: "住宿", icon: "fa-hot-tub-person", title: "定山溪萬世閣", location: "定山溪萬世閣酒店", note: "【特色】定山溪老牌名店，享受溪谷溫泉。<br>MapCode: 708 755 362*52", link: "https://www.milione.jp/" }
                 ]
             },
             {
@@ -181,11 +183,11 @@
                 summary: "與馬兒親近，並在千歲市區進行最後的購物大採買。",
                 guideNotes: "<p><strong>第四天提醒：</strong></p><ul><li><strong>優駿公園：</strong>馬術秀時間請現場確認。</li><li><strong>超市採買：</strong>Super Arcs 很大很好逛，可以在這買一些乾貨回台。</li></ul>",
                 activities: [
-                    { time: "上午", icon: "fa-horse", title: "北國優駿公園", location: "Northern Horse Park", note: "【特色】可騎馬、搭馬車，與馬兒近距離互動。<br>MapCode: 113 774 216*21", link: "https://www.northern-horse-park.jp/", image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000&auto=format&fit=crop" },
-                    { time: "中午", icon: "fa-fish", title: "道の駅サーモンパーク千歳", location: "千歲鮭魚公園", note: "【特色】可以在這用餐並參觀鮭魚博物館。<br>MapCode: 113 887 508*55", link: "https://salmonpark.com/" },
-                    { time: "下午", icon: "fa-cart-shopping", title: "唐吉訶德 千歲店", location: "Don Quijote Chitose", note: "【購物】最後的藥妝、生活百貨補貨。<br>MapCode: 113 887 232*11" },
-                    { time: "下午", icon: "fa-basket-shopping", title: "超市 Super Arcs", location: "Super Arcs 千歲店", note: "【必買】北海道限定零食、當季水果。<br>MapCode: 113 886 414*44" },
-                    { time: "住宿", icon: "fa-hotel", title: "Minn Chitose", location: "Minn Chitose", note: "【特色】空間大，適合在最後一晚整理所有戰利品。<br>MapCode: 113 856 500*22", link: "https://minn.asia/chitose" }
+                    { time: "上午", icon: "fa-horse", title: "北國優駿公園", location: "Northern Horse Park", note: "【特色】可騎馬、搭馬車，與馬兒近距離互動。<br>MapCode: 113 712 186*50", link: "https://www.northern-horsepark.jp/", image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000&auto=format&fit=crop" },
+                    { time: "中午", icon: "fa-fish", title: "道の駅サーモンパーク千歳", location: "千歲鮭魚公園", note: "【特色】可以在這用餐並參觀鮭魚博物館。<br>MapCode: 113 889 705*43", link: "https://www.salmonpark.com/" },
+                    { time: "下午", icon: "fa-cart-shopping", title: "唐吉訶德 千歲店", location: "Don Quijote Chitose", note: "【購物】最後的藥妝、生活百貨補貨。<br>MapCode: 113 723 358*44" },
+                    { time: "下午", icon: "fa-basket-shopping", title: "超市 Super Arcs", location: "Super Arcs 千歲店", note: "【必買】北海道限定零食、當季水果。<br>MapCode: 113 857 732*60" },
+                    { time: "住宿", icon: "fa-hotel", title: "Minn Chitose", location: "Minn Chitose", note: "【特色】空間大，適合在最後一晚整理所有戰利品。<br>MapCode: 113 762 138*14", link: "https://staytuned.asia/ja/brands/minn/hotels/minn_chitose" }
                 ]
             },
             {
@@ -196,7 +198,7 @@
                 guideNotes: "<p><strong>機場提醒：</strong></p><ul><li><strong>名產：</strong>Royce、白色戀人、六花亭在機場國內線都有大集合。</li><li><strong>還車：</strong>請務必在還車前到指定的加油站加滿油。</li></ul>",
                 activities: [
                     { time: "上午", icon: "fa-cart-shopping", title: "新千歲機場國內線", location: "新千歲機場", note: "北海道最強伴手禮區。" },
-                    { time: "12:05", icon: "fa-plane-departure", title: "飛往台灣 (IT235)", location: "新千歲機場", note: "預計 15:20 抵達桃園。下機後領取行李回家。" }
+                    { time: "12:05", icon: "fa-plane-departure", title: "飛往台灣 (IT235)", location: "新千歲機場", note: "預計 15:20 抵達桃園。" }
                 ]
             },
             {
@@ -206,8 +208,8 @@
                 summary: "這裡彙整了您的租車資訊、機票與氣溫建議。",
                 guideNotes: "<p><strong>穿搭建議：</strong>北海道五月日溫差極大，白天舒適但傍晚會降至 10 度以下。請務必攜帶防風、防水外套。</p>",
                 activities: [
-                    { time: "租車", icon: "fa-car", title: "Times Car Rental", location: "新千歲空港店", note: "MapCode: 113 831 657*71<br>聯絡電話：0123-27-0101", link: "https://www.timescar-rental.com/zh_hk/hokkaido/shop/0101/" },
-                    { time: "機票", icon: "fa-ticket", title: "虎航 IT234 / IT235", location: "桃園 <-> 新千歲", note: "代碼：DCJRPX" },
+                    { time: "租車", icon: "fa-car", title: "Budget Rent a Car", location: "新千歲空港店", note: "MapCode: 113 770 666*66", link: "https://www.budgetrentacar.co.jp/zh/shop/hokkaido/0700/" },
+                    { time: "機票", icon: "fa-ticket", title: "虎航 IT234 / IT235", location: "桃園 <-> 新千歲", note: "5/20 6:20-11:05；5/24 12:05-15:20" },
                     { time: "緊急", icon: "fa-phone", title: "緊急救援", location: "北海道警察/醫院", note: "報警 110、救護車 119。" }
                 ]
             }
@@ -309,7 +311,7 @@
                         <div class="relative flex gap-4 fade-in ${isLast ? 'last-item' : ''}" style="animation-delay: ${idx * 0.1}s">
                             <div class="flex flex-col items-center">
                                 <div class="rounded-full border-2 border-white flex items-center justify-center shadow-sm z-10 shrink-0"
-                                     style="width: var(--timeline-icon-size); height: var(--timeline-icon-size); font-size: var(--timeline-icon-font-size); background-color: var(--light-blue); color: var(--text-main);">
+                                     style="width: var(--timeline-icon-size); height: var(--timeline-icon-size); font-size: var(--timeline-icon-font-size); background-color: var(--light-blue); color: white;">
                                     <i class="fa-solid ${activity.icon}"></i>
                                 </div>
                                 <div class="timeline-line"></div>
@@ -320,13 +322,13 @@
                                     <i class="fa-solid fa-circle-notch fa-spin"></i>
                                 </div>
 
-                                <div class="font-bold mb-1 uppercase" style="font-size: var(--meta-font-size); color: var(--text-sub); opacity: 0.7;">${activity.time}</div>
+                                <div class="font-bold mb-1 uppercase" style="font-size: var(--meta-font-size); color: var(--primary-color); opacity: 0.9;">${activity.time}</div>
                                 <h3 class="font-bold mb-1" style="font-size: var(--title-font-size); color: var(--text-main);">${activity.title}</h3>
                                 <p class="flex items-center gap-1 mb-3" style="font-size: var(--meta-font-size); color: var(--text-sub);">
                                     <i class="fa-solid fa-location-dot opacity-50 text-xs"></i> ${activity.location}
                                 </p>
                                 
-                                <div class="mb-4 leading-relaxed p-3 border-l-2 rounded-r-lg" style="font-size: var(--note-font-size); line-height: 1.6; border-color: var(--primary-color); background-color: rgba(210, 237, 221, 0.1); color: var(--text-sub);">
+                                <div class="mb-4 leading-relaxed p-3 border-l-2 rounded-r-lg" style="font-size: var(--note-font-size); line-height: 1.6; border-color: var(--primary-color); background-color: rgba(224, 67, 112, 0.05); color: var(--text-sub);">
                                     ${activity.note}
                                 </div>
 
@@ -338,11 +340,11 @@
 
                                 <div class="flex flex-wrap gap-2 mt-auto">
                                     <a href="${mapUrl}" target="_blank" class="nav-btn px-4 py-2 rounded-lg text-center font-bold flex items-center justify-center gap-2 hover:bg-gray-50 flex-grow" style="font-size: var(--meta-font-size);">
-                                        <i class="fa-solid fa-location-arrow" style="color: var(--text-main);"></i> 導航
+                                        <i class="fa-solid fa-location-arrow" style="color: var(--primary-color);"></i> 導航
                                     </a>
                                     ${activity.link ? `
                                     <a href="${activity.link}" target="_blank" class="nav-btn w-10 py-2 rounded-lg text-center flex items-center justify-center hover:bg-gray-50">
-                                        <i class="fa-solid fa-link" style="color: var(--text-main);"></i>
+                                        <i class="fa-solid fa-link" style="color: var(--primary-color);"></i>
                                     </a>` : ''}
                                 </div>
                             </div>
