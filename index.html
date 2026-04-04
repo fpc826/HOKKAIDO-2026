@@ -140,10 +140,12 @@
                 guideNotes: "<p></p><ul><li><strong>登別地獄谷：</strong>日和山爆發後所形成的火山口遺跡，空氣中瀰漫著濃烈的硫磺味。</li><li><strong>第一滝本館：</strong>全登別唯一一家擁有5 種不同泉質-硫磺泉、食鹽泉、酸性綠礬泉、小蘇打泉、芒硝泉-的飯店。</li></ul>",
                 activities: [
                     { 
-                        time: "02:30", icon: "fa-house", title: "台中出發", location: "台中", note: "搭乘機場接送前往桃園機場。",
+                        time: "02:30", icon: "fa-house", title: "台中出發", location: "台中", 
+                        content: [{ text: "搭乘機場接送前往桃園機場。", image: "" }]
                     },
                     { 
-                        time: "06:20", icon: "fa-plane-departure", title: "桃園飛新千歲 (IT234)", location: "桃園機場", note: "預計 11:05 抵達。",
+                        time: "06:20", icon: "fa-plane-departure", title: "桃園飛新千歲 (IT234)", location: "桃園機場", 
+                        content: [{ text: "預計 11:05 抵達。", image: "" }],
                         links: [
                             { url: "https://ec-v2.tigerairtw.com/zh-tw/check-flight-status/", title: "航班動態" },
                         ]
@@ -153,7 +155,7 @@
                         icon: "fa-car", 
                         title: "Budget 取車", 
                         location: "Budget Rent a Car新千歲空港店", 
-                        note: "租車櫃檯在新千歲機場一樓3號到達大廳附近。<br>車程約15分。<br>MapCode: 113 770 666*66", 
+                        content: [{ text: "租車櫃檯在新千歲機場一樓3號到達大廳附近。<br>車程約15分。<br>MapCode: 113 770 666*66", image: "" }],
                         links: [
                             { url: "https://www.budgetrentacar.co.jp/zh/shop/hokkaido/0700/", title: "租車官網" },
                             { url: "https://www.hokkaido-airports.com/zh-CHT/new-chitose/floormap/", title: "新千歲機場" },
@@ -164,20 +166,37 @@
                         icon: "fa-mountain", 
                         title: "【大地的脈動】", 
                         location: "登別地獄谷", 
-                        note: "登別地獄谷是約一萬年前日和山爆發後所形成的火山口遺跡。直徑約 450 公尺的巨大谷地中，隨處可見白煙繚繞、泉水噴發與沸騰的泥漿，空氣中瀰漫著濃烈的硫磺味。由於荒涼且煙霧繚繞的景象極像傳說中的「地獄」，因而得名。這裡是登別溫泉的主水源基地，每天湧出高達一萬噸、多達 9 種不同性質的泉水，被譽為「溫泉的百貨公司。<br>【推薦】在登別，可隨處看到面目猙獰但形象可愛的「鬼」（Yukijin）。當地人相信這些鬼怪是守護溫泉與居民的「湯鬼神」。溫泉街上的「閻魔堂」，定時會有震撼的「變臉秀」。<br>【名產】使用溫泉水與黑糖製作的登別溫泉饅頭、鬼之淚(藥膳辣油)與金棒配件等鬼相關產品<br>MapCode: 603 287 021*23", 
+                        content: [
+                            {
+                                text: "登別地獄谷是約一萬年前日和山爆發後所形成的火山口遺跡。直徑約 450 公尺的巨大谷地中，隨處可見白煙繚繞、泉水噴發與沸騰的泥漿，空氣中瀰漫著濃烈的硫磺味。由於荒涼且煙霧繚繞的景象極像傳說中的「地獄」，因而得名。這裡是登別溫泉的主水源基地，每天湧出高達一萬噸、多達 9 種不同性質的泉水，被譽為「溫泉的百貨公司」。",
+                                image: "https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=1000&auto=format&fit=crop"
+                            },
+                            {
+                                text: "【推薦】在登別，可隨處看到面目猙獰但形象可愛的「鬼」（Yukijin）。當地人相信這些鬼怪是守護溫泉與居民的「湯鬼神」。溫泉街上的「閻魔堂」，定時會有震撼的「變臉秀」。",
+                                image: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?q=80&w=1000&auto=format&fit=crop"
+                            },
+                            {
+                                text: "【名產】使用溫泉水與黑糖製作的登別溫泉饅頭、鬼之淚(藥膳辣油)與金棒配件等鬼相關產品。",
+                                image: "https://images.unsplash.com/photo-1582730147924-d92b3f630cd2?q=80&w=1000&auto=format&fit=crop"
+                            }
+                        ],
                         links: [
                             { url: "https://www.visit-hokkaido.jp/tw/spot/detail_10157.html", title: "介紹" },
                             { url: "#", title: "預留連結2" },
                             { url: "#", title: "預留連結3" }
-                        ],
-                        image: "https://images.unsplash.com/photo-1590559899731-a382839e5549?q=80&w=1000&auto=format&fit=crop" 
+                        ]
                     },
                     { 
                         time: "住宿", 
                         icon: "fa-bed", 
                         title: "【跨越百年的溫泉樂園】", 
                         location: "第一滝本館", 
-                        note: "這是全登別唯一一家擁有5 種不同泉質-硫磺泉、食鹽泉、酸性綠礬泉、小蘇打泉、芒硝泉-的飯店。最震撼的是其面積達 1,500 坪 的巨大浴場，內有 35 個浴池，24 小時開放。<br>飯店正門對面就是地獄谷步道的入口，距離溫泉街僅幾步之遙。大廳內還有一座高達 9 公尺的巨大「大金棒」機關鐘，每到整點會有精彩的音樂表演<br>【晚餐】自助餐「原始林／雪国」<br>【房型】西館和室五人房。<br>MapCode: 603 287 114*74", 
+                        content: [
+                            {
+                                text: "這是全登別唯一一家擁有5 種不同泉質-硫磺泉、食鹽泉、酸性綠礬泉、小蘇打泉、芒硝泉-的飯店。最震撼的是其面積達 1,500 坪 的巨大浴場，內有 35 個浴池，24 小時開放。<br>飯店正門對面就是地獄谷步道的入口，距離溫泉街僅幾步之遙。大廳內還有一座高達 9 公尺的巨大「大金棒」機關鐘，每到整點會有精彩的音樂表演<br>【晚餐】自助餐「原始林／雪国」<br>【房型】西館和室五人房。<br>MapCode: 603 287 114*74",
+                                image: ""
+                            }
+                        ],
                         links: [
                             { url: "https://takimotokan.co.jp/ja/", title: "官網" },
                             { url: "https://takimotokan.co.jp/ja/spa/", title: "溫泉" },
@@ -194,35 +213,42 @@
                 guideNotes: "<p></p><ul><li><strong>伊達神社：</strong>主求交通安全、身體健康、家庭和順。</li><li><strong>有珠山纜車：</strong>看見昭和新山。建議多帶一件薄外套。</li><li><strong>虻田神社：</strong>北海道最強能量點，主要祈求身體健康、無病息災、姻緣（結緣）、交通安全。</li><li><strong>Lake Hill Farm：</strong>手工義式冰淇淋。</li><li><strong>洞爺湖筒倉展望台：</strong>欣賞洞爺湖；採購。</li></ul>",
                 activities: [
                     { 
-                        time: "上午", icon: "fa-torii-gate", title: "【北國武士的開拓之魂】", location: "伊達神社", note: "伊達神社始建於明治時代（1880年）。當時仙台藩的一門「亘理伊達氏」第14代領主伊達邦成，帶領家臣與家屬移居此地進行開拓。為了祈求開拓順利與守護族人，他們建立了這座神社。<br>這裡祭祀著開拓功臣伊達邦成以及大物主神等神祇，是伊達市極具代表性的文化地標，主求交通安全、身體健康、家庭和順。<br>MapCode: 346 130 081*55",
+                        time: "上午", icon: "fa-torii-gate", title: "【北國武士的開拓之魂】", location: "伊達神社", 
+                        content: [{ text: "伊達神社始建於明治時代（1880年）。當時仙台藩的一門「亘理伊達氏」第14代領主伊達邦成，帶領家臣與家屬移居此地進行開拓。為了祈求開拓順利與守護族人，他們建立了這座神社。<br>這裡祭祀著開拓功臣伊達邦成以及大物主神等神祇，是伊達市極具代表性的文化地標，主求交通安全、身體健康、家庭和順。<br>MapCode: 346 130 081*55", image: "" }],
                         links: [
                             { url: "https://www.datejinja.com/", title: "官網" }
                         ]
                     },
                     { 
-                        time: "上午", icon: "fa-cable-car", title: "【感受「地球的呼吸」】", location: "有珠山纜車", note: "有珠山纜車連接了昭和新山的平地與有珠山的頂端。搭乘這座擁有大面積景觀窗的瑞士製纜車，僅需約 6 分鐘，就能輕鬆升上海拔約 700 公尺的高度。隨著高度上升，原本在眼前的昭和新山會逐漸變小，而湛藍的洞爺湖與遠方的羊蹄山（蝦夷富士）會如同畫卷般在眼前緩緩展開。<br>從纜車山頂站步行約 7 分鐘即可抵達展望台。這裡可以俯瞰 1977 年大爆發形成的巨大火口，目前依然有白煙冒出，那種荒涼卻帶有生命力的「地獄景觀」，與另一側明媚的湖景形成強烈對比。<br>【推薦】新山堂摩卡霜淇淋： 位於山麓站的商店「新山堂」在 2026 年春季推出了全新的摩卡口味霜淇淋，濃郁奶香與咖啡微苦的平衡，是下山後的最佳獎勵。<br>【推薦】若狹芋 (Wakasaimo)：這是洞爺湖地區最出名的甜點。雖然名字叫「芋」，但其實是用大福豆泥加入昆布絲（模擬地瓜纖維）製作而成，吃起來鹹甜交織，外皮還刷上醬油烘烤，非常有特色。<br>MapCode: 321 433 350*55", 
+                        time: "上午", icon: "fa-cable-car", title: "【感受「地球的呼吸」】", location: "有珠山纜車", 
+                        content: [{ 
+                            text: "有珠山纜車連接了昭和新山的平地與有珠山的頂端。搭乘這座擁有大面積景觀窗的瑞士製纜車，僅需約 6 分鐘，就能輕鬆升上海拔約 700 公尺的高度。隨著高度上升，原本在眼前的昭和新山會逐漸變小，而湛藍的洞爺湖與遠方的羊蹄山（蝦夷富士）會如同畫卷般在眼前緩緩展開。<br>從纜車山頂站步行約 7 分鐘即可抵達展望台。這裡可以俯瞰 1977 年大爆發形成的巨大火口，目前依然有白煙冒出，那種荒涼卻帶有生命力的「地獄景觀」，與另一側明媚的湖景形成強烈對比。<br>【推薦】新山堂摩卡霜淇淋： 位於山麓站的商店「新山堂」在 2026 年春季推出了全新的摩卡口味霜淇淋，濃郁奶香與咖啡微苦的平衡，是下山後的最佳獎勵。<br>【推薦】若狹芋 (Wakasaimo)：這是洞爺湖地區最出名的甜點。雖然名字叫「芋」，但其實是用大福豆泥加入昆布絲（模擬地瓜纖維）製作而成，吃起來鹹甜交織，外皮還刷上醬油烘烤，非常有特色。<br>MapCode: 321 433 350*55", 
+                            image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop" 
+                        }],
                         links: [
                             { url: "https://usuzan.hokkaido.jp/ja/", title: "官網" },
                             { url: "https://www.wakasaimo.com/tw/", title: "若狹芋" },
-                        ], 
-                        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1000&auto=format&fit=crop" 
+                        ]
                     },
                     { 
-                        time: "上午", icon: "fa-torii-gate", title: "【守護龍脈的靈氣之地】", location: "虻田神社", note: "虻田神社被譽為「北海道最強能量點」之一，與利尻山、羊蹄山、駒岳這三座名山呈一直線排列的「能量線」上，而在其延長線上，則有日本第一名山「富士山」。地理位置正好處於風水學中的「龍脈」之上，因噴發而形成的洞爺湖也被稱為「龍穴」。<br>虻田神社主要祭祀著守護開拓、產業發展與海上安全的「稻荷大神」。由於其地理位置正對著噴火灣，與後方的活火山能量相互呼應，近年來以「強大的開運能量」在社群媒體上爆紅。不僅當地居民虔誠信仰，更有許多日本企業家與藝術家專程前來參拜，祈求事業與靈感的突破。<br>虻田神社與「蛇」有著神祕的淵源，白蛇被視為神明的使者，象徵財運與再生。<br>MapCode: 321 025 829*03",
+                        time: "上午", icon: "fa-torii-gate", title: "【守護龍脈的靈氣之地】", location: "虻田神社", 
+                        content: [{ text: "虻田神社被譽為「北海道最強能量點」之一，與利尻山、羊蹄山、駒岳這三座名山呈一直線排列的「能量線」上，而在其延長線上，則有日本第一名山「富士山」。地理位置正好處於風水學中的「龍脈」之上，因噴發而形成的洞爺湖也被稱為「龍穴」。<br>虻田神社主要祭祀著守護開拓、產業發展與海上安全的「稻荷大神」。由於其地理位置正對著噴火灣，與後方的活火山能量相互呼應，近年來以「強大的開運能量」在社群媒體上爆紅。不僅當地居民虔誠信仰，更有許多日本企業家與藝術家專程前來參拜，祈求事業與靈感的突破。<br>虻田神社與「蛇」有著神祕的淵源，白蛇被視為神明的使者，象徵財運與再生。<br>MapCode: 321 025 829*03", image: "" }],
                         links: [
                             { url: "https://abutajinja.holy.jp/", title: "官網" },
                             { url: "https://www.visit-hokkaido.jp/tw/spot/detail_12808.html", title: "介紹" },
                         ]
                     },
                     { 
-                        time: "中午", icon: "fa-ice-cream", title: "【與羊蹄山對望的綠色莊園】", location: "Lake Hill Farm", note: "Lake Hill Farm 座落於洞爺湖後方的高原上，擁有一片無邊無際的翠綠草地。這裡最大的魅力在於其絕佳的視野——在天氣晴朗時，壯麗的「蝦夷富士」羊蹄山就屹立在草原盡頭。牧場堅持使用自家產的鮮乳製作各種甜點，讓您一邊品嚐大地的滋味，一邊感受北海道特有的開闊與寧靜。<br>【推薦】職人手工義式冰淇淋 (Gelato)，牧場每天提供約 20 種口味的義式冰淇淋，全部使用早上現擠的鮮乳製作。<br>MapCode: 321 694 504*32", 
+                        time: "中午", icon: "fa-ice-cream", title: "【與羊蹄山對望的綠色莊園】", location: "Lake Hill Farm", 
+                        content: [{ text: "Lake Hill Farm 座落於洞爺湖後方的高原上，擁有一片無邊無際的翠綠草地。這裡最大的魅力在於其絕佳的視野——在天氣晴朗時，壯麗的「蝦夷富士」羊蹄山就屹立在草原盡頭。牧場堅持使用自家產的鮮乳製作各種甜點，讓您一邊品嚐大地的滋味，一邊感受北海道特有的開闊與寧靜。<br>【推薦】職人手工義式冰淇淋 (Gelato)，牧場每天提供約 20 種口味的義式冰淇淋，全部使用早上現擠的鮮乳製作。<br>MapCode: 321 694 504*32", image: "" }],
                         links: [
                             { url: "https://www.lake-hill.com/", title: "官網" },
                             { url: "https://www.lake-hill.com/wp/wp-content/uploads/2019/06/gelatomenu_chinese0509.pdf", title: "MENU" },
                         ]
                     },
                     { 
-                        time: "下午", icon: "fa-camera", title: "【俯瞰北國明珠的制高點】", location: "洞爺湖筒倉展望台 Silo Observatory", note: "筒倉展望台座落於洞爺湖西岸的高地上，是環繞洞爺湖的國道旁最知名的觀景設施。這裡擁有絕佳的地理優勢，能將整座圓形的洞爺湖、湖中心的「中島」、後方的有珠山與昭和新山，甚至是遠處如富士山般壯麗的「羊蹄山」一網打盡。<br>內部的購物中心是洞爺湖地區品項最齊全、規模最大的伴手禮集散地，從在地農產、甜點名牌到生活藥妝應有盡有。MapCode: 321 726 761*12",
+                        time: "下午", icon: "fa-camera", title: "【俯瞰北國明珠的制高點】", location: "洞爺湖筒倉展望台 Silo Observatory", 
+                        content: [{ text: "筒倉展望台座落於洞爺湖西岸的高地上，是環繞洞爺湖的國道旁最知名的觀景設施。這裡擁有絕佳的地理優勢，能將整座圓形的洞爺湖、湖中心的「中島」、後方的有珠山與昭和新山，甚至是遠處如富士山般壯麗的「羊蹄山」一網打盡。<br>內部的購物中心是洞爺湖地區品項最齊全、規模最大的伴手禮集散地，從在地農產、甜點名牌到生活藥妝應有盡有。MapCode: 321 726 761*12", image: "" }],
                         links: [
                             { url: "https://toyako.biz/", title: "官網" },
                             { url: "https://toyako.biz/shop/", title: "土產" },
@@ -230,7 +256,8 @@
                         ]
                     },
                     { 
-                        time: "晚餐", icon: "fa-fire-burner", title: "晚餐吃什麼~待定", location: "Niseko Loft Club", note: "原本要吃炭火直燒成吉思汗烤羊肉，可惜店家五月休息，可能路上找海鮮丼、拉麵、或是超商買泡麵回飯店吃。", 
+                        time: "晚餐", icon: "fa-fire-burner", title: "晚餐吃什麼~待定", location: "Niseko Loft Club", 
+                        content: [{ text: "原本要吃炭火直燒成吉思汗烤羊肉，可惜店家五月休息，可能路上找海鮮丼、拉麵、或是超商買泡麵回飯店吃。", image: "" }],
                         links: [
                             { url: "https://loftclub1989.com/", title: "預約/菜單" },
                             { url: "#", title: "預留連結2" },
@@ -238,7 +265,8 @@
                         ]
                     },
                     { 
-                        time: "住宿", icon: "fa-bed", title: "【被大自然深情擁抱的療癒之所】", location: "甘露之森 Hotel KANRONOMORI", note: "飯店坐落於二世谷昆布溫泉區，室內設計融合了大量的木質元素，營造出溫暖且充滿禪意的氛圍。最特別的是，飯店每天晚上都會在大廳舉辦現場音樂演奏（如鋼琴或小提琴），音符在挑高的木質空間中迴盪，窗外則是四季更迭的森林美景。<br>甘露之森的溫泉泉質非常出名，屬於含硫磺與食鹽的碳酸氫鹽泉，且含有極高濃度的「偏矽酸」(天然的保濕成分)，浸泡後皮膚會感覺滑溜細緻，因此被譽為「美人之湯」。<br>【房型】雙床房+塌塌米區<br>MapCode: 398 387 114*63", 
+                        time: "住宿", icon: "fa-bed", title: "【被大自然深情擁抱的療癒之所】", location: "甘露之森 Hotel KANRONOMORI", 
+                        content: [{ text: "飯店坐落於二世谷昆布溫泉區，室內設計融合了大量的木質元素，營造出溫暖且充滿禪意的氛圍。最特別的是，飯店每天晚上都會在大廳舉辦現場音樂演奏（如鋼琴或小提琴），音符在挑高的木質空間中迴盪，窗外則是四季更迭的森林美景。<br>甘露之森的溫泉泉質非常出名，屬於含硫磺與食鹽的碳酸氫鹽泉，且含有極高濃度的「偏矽酸」(天然的保濕成分)，浸泡後皮膚會感覺滑溜細緻，因此被譽為「美人之湯」。<br>【房型】雙床房+塌塌米區<br>MapCode: 398 387 114*63", image: "" }],
                         links: [
                             { url: "http://www.kanronomori.com/", title: "官網" },
                             { url: "http://www.kanronomori.com/onsen.html", title: "溫泉" },
@@ -254,40 +282,48 @@
                 guideNotes: "<p></p><ul><li><strong>二世古高橋牧場：</strong>翠綠草地、鮮奶泡芙、蝦夷富士。</li><li><strong>三島芝櫻：</strong>此為私人景點，請務必安靜參觀、保持環境整潔。</li><li><strong>道の駅 望羊中山：</strong>傳奇靈魂美食-中山峠「炸馬鈴薯球」。</li><li><strong>小金湯櫻之森：</strong>約 800 棵、共 11 個品種的櫻花森林。</li><li><strong>定山溪：</strong>尋找河童 (Kappa)、二見吊橋。</li></ul>",
                 activities: [
                     { 
-                        time: "10:00", icon: "fa-cow", title: "【羊蹄山下的鮮乳天堂】", location: "二世古高橋牧場", note: "座落在壯麗的羊蹄山（蝦夷富士）腳下，高橋牧場以其著名的「牛奶工房」(Milk Kobo)聞名遐邇。這裡堅持「從牧草到鮮乳」的一貫化經營，強調環境永續與牛隻健康。對旅人來說，這裡最迷人的莫過於在大片翠綠草地上，一邊啃著剛出爐的泡芙，一邊平視那座幾乎觸手可及的羊蹄山。<br>【推薦】新鮮優格與鮮奶，還有傳奇級「現灌」泡芙，這是高橋牧場的靈魂！這裡的泡芙外皮酥脆，內餡則是點餐後才現場灌入的濃郁卡士達醬。<br>MapCode: 398 321 075*21", 
+                        time: "10:00", icon: "fa-cow", title: "【羊蹄山下的鮮乳天堂】", location: "二世古高橋牧場", 
+                        content: [{ text: "座落在壯麗的羊蹄山（蝦夷富士）腳下，高橋牧場以其著名的「牛奶工房」(Milk Kobo)聞名遐邇。這裡堅持「從牧草到鮮乳」的一貫化經營，強調環境永續與牛隻健康。對旅人來說，這裡最迷人的莫過於在大片翠綠草地上，一邊啃著剛出爐的泡芙，一邊平視那座幾乎觸手可及的羊蹄山。<br>【推薦】新鮮優格與鮮奶，還有傳奇級「現灌」泡芙，這是高橋牧場的靈魂！這裡的泡芙外皮酥脆，內餡則是點餐後才現場灌入的濃郁卡士達醬。<br>MapCode: 398 321 075*21", image: "" }],
                         links: [
                             { url: "https://www.niseko-takahashi.jp/", title: "牧場資訊" },
                         ]
                     },
                     { 
-                        time: "上午", icon: "fa-leaf", title: "【羊蹄山麓下的夢幻粉紅花海】", location: "三島先生的芝櫻庭園", note: "這不是一座政府經營的公園，而是由一位曾從事農業的三島和夫先生，利用退休後的時間，在自家的 4,000 平方公尺農地上獨自栽種而成的。這裡不收門票，完全是三島先生為了「想讓大家看見美景」而免費開放的私房庭園。每當春夏交替之際，漫山遍野的芝櫻盛開，彷彿在地面鋪上了一層厚厚的粉紅地毯，與背景莊嚴的「羊蹄山」交織成一幅令人窒息的美景。<br>這裡每年僅在盛開期（約 5 月下旬至 6 月上旬）對外開放。因為是私人住家，參觀時請務必保持安靜並帶走垃圾，這也是與這位熱心老先生最好的互動方式。<br>MapCode: 398 569 607*54", 
+                        time: "上午", icon: "fa-leaf", title: "【羊蹄山麓下的夢幻粉紅花海】", location: "三島先生的芝櫻庭園", 
+                        content: [{ 
+                            text: "這不是一座政府經營的公園，而是由一位曾從事農業的三島和夫先生，利用退休後的時間，在自家的 4,000 平方公尺農地上獨自栽種而成的。這裡不收門票，完全是三島先生為了「想讓大家看見美景」而免費開放的私房庭園。每當春夏交替之際，漫山遍野的芝櫻盛開，彷彿在地面鋪上了一層厚厚的粉紅地毯，與背景莊嚴的「羊蹄山」交織成一幅令人窒息的美景。<br>這裡每年僅在盛開期（約 5 月下旬至 6 月上旬）對外開放。因為是私人住家，參觀時請務必保持安靜並帶走垃圾，這也是與這位熱心老先生最好的互動方式。<br>MapCode: 398 569 607*54", 
+                            image: "https://images.unsplash.com/photo-1541014569566-d98c2ca8388b?q=80&w=1000&auto=format&fit=crop" 
+                        }],
                         links: [
                             { url: "https://www.visit-hokkaido.jp/tw/spot/detail_11221.html", title: "介紹" },
-                        ],
-                        image: "https://images.unsplash.com/photo-1541014569566-d98c2ca8388b?q=80&w=1000&auto=format&fit=crop" 
+                        ]
                     },
                     { 
-                        time: "中午", icon: "fa-mountain-sun", title: "【跨越山嶺的能量補給站】", location: "道の駅 望羊中山", note: "望羊中山之所以得名，是因為在這裡可以平視壯麗的「羊蹄山」（望見羊蹄山之意）。由於位處高海拔的山頂，這裡的空氣特別清爽，即使是夏天也帶著一絲涼意，而冬天則是白雪覆蓋的夢幻世界。<br>【推薦】傳奇靈魂美食-中山峠「炸馬鈴薯球」(Age-imo / あげいも)用一根竹籤串起三顆碩大的北海道產馬鈴薯，裹上帶點甜味的特製麵衣油炸。外皮金黃酥脆，內裡鬆軟綿密。<br>MapCode: 759 672 331*28",
+                        time: "中午", icon: "fa-mountain-sun", title: "【跨越山嶺的能量補給站】", location: "道の駅 望羊中山", 
+                        content: [{ text: "望羊中山之所以得名，是因為在這裡可以平視壯麗的「羊蹄山」（望見羊蹄山之意）。由於位處高海拔的山頂，這裡的空氣特別清爽，即使是夏天也帶著一絲涼意，而冬天則是白雪覆蓋的夢幻世界。<br>【推薦】傳奇靈魂美食-中山峠「炸馬鈴薯球」(Age-imo / あげいも)用一根竹籤串起三顆碩大的北海道產馬鈴薯，裹上帶點甜味的特製麵衣油炸。外皮金黃酥脆，內裡鬆軟綿密。<br>MapCode: 759 672 331*28", image: "" }],
                         links: [
                             { url: "https://ageimo.com/", title: "官網" },
                             { url: "https://1817box.tw/ageimo/", title: "介紹" },
                         ]
                     },
                     { 
-                        time: "下午", icon: "fa-tree", title: "【群山環抱的粉色樂章】", location: "小金湯櫻之森", note: "小金湯櫻之森座落於札幌市南區，鄰近著名的定山溪溫泉區。這座公園佔地約 4.5 公頃，是為了慶祝札幌開府 150 週年而悉心打造。園內栽種了約 800 棵、共 11 個品種的櫻花樹。<br>公園內不僅有常見的「染井吉野櫻」，還栽種了蝦夷山櫻、八重櫻等。因為品種眾多，花期交錯綻放，整個 5 月上旬至中旬都有機會看到不同色階的粉紅。<br>MapCode: 708 761 501*07",
+                        time: "下午", icon: "fa-tree", title: "【群山環抱的粉色樂章】", location: "小金湯櫻之森", 
+                        content: [{ text: "小金湯櫻之森座落於札幌市南區，鄰近著名的定山溪溫泉區。這座公園佔地約 4.5 公頃，是為了慶祝札幌開府 150 週年而悉心打造。園內栽種了約 800 棵、共 11 個品種的櫻花樹。<br>公園內不僅有常見的「染井吉野櫻」，還栽種了蝦夷山櫻、八重櫻等。因為品種眾多，花期交錯綻放，整個 5 月上旬至中旬都有機會看到不同色階的粉紅。<br>MapCode: 708 761 501*07", image: "" }],
                         links: [
                             { url: "https://jozankei.jp/tw/spot/sakura-no-mori/", title: "官網" },
                         ]
                     },
                     { 
-                        time: "下午", icon: "fa-bridge", title: "【河童守護的溪谷祕境】", location: "定山溪溫泉街", note: "定山溪溫泉座落於支笏洞爺國立公園內，溫泉街沿著壯麗的「豐平川」溪谷而建，兩岸盡是陡峭的懸崖與茂密的森林。這裡的歷史可追溯至 1866 年，由僧侶美泉定山所開發。因為水質清澈且富含礦物質，自古以來就是北海道人的避暑與泡湯勝地。<br>定山溪有一個非常可愛的傳統——河童 (Kappa) 是這裡的守護神。漫步在溫泉街，隨處可以看見各種神態各異的河童石像(共有20多座！)，最著名的是「河童大王」噴泉。<br>二見吊橋是定山溪的地標，這座鮮紅色的吊橋橫跨在豐平川上，從橋上往下看，溪水切割出的「舞鶴之淵」與周邊山景交織，是拍照最美的地方。<br>【推薦】「大黑屋」溫泉饅頭:外皮使用黑糖與蜂蜜製作，內餡是綿密的紅豆沙，每天現蒸現賣<br>MapCode: 708 755 362*52", 
+                        time: "下午", icon: "fa-bridge", title: "【河童守護的溪谷祕境】", location: "定山溪溫泉街", 
+                        content: [{ text: "定山溪溫泉座落於支笏洞爺國立公園內，溫泉街沿著壯麗的「豐平川」溪谷而建，兩岸盡是陡峭的懸崖與茂密的森林。這裡的歷史可追溯至 1866 年，由僧侶美泉定山所開發。因為水質清澈且富含礦物質，自古以來就是北海道人的避暑與泡湯勝地。<br>定山溪有一個非常可愛的傳統——河童 (Kappa) 是這裡的守護神。漫步在溫泉街，隨處可以看見各種神態各異的河童石像(共有20多座！)，最著名的是「河童大王」噴泉。<br>二見吊橋是定山溪的地標，這座鮮紅色的吊橋橫跨在豐平川上，從橋上往下看，溪水切割出的「舞鶴之淵」與周邊山景交織，是拍照最美的地方。<br>【推薦】「大黑屋」溫泉饅頭:外皮使用黑糖與蜂蜜製作，內餡是綿密的紅豆沙，每天現蒸現賣<br>MapCode: 708 755 362*52", image: "" }],
                         links: [
                             { url: "https://jozankei.jp/tw/highlights/", title: "定山溪溫泉街" },
                             { url: "https://www.visit-hokkaido.jp/tw/spot/detail_10525.html", title: "二見吊橋" }
                         ]
                     },
                     { 
-                        time: "住宿", icon: "fa-hot-tub-person", title: "【絲路風情與北國溫泉的交匯】", location: "定山溪萬世閣酒店 Milione", note: "這間飯店的名字「Milione」源自馬可·波羅的綽號，象徵著「百萬次的感動與旅程」。這座飯店是萬世閣集團旗下的經典之作，以其寬敞的空間與豐富的服務聞名。室內設計巧妙地融入了「絲路」的主題，大廳挑高且充滿異國情調。與一般傳統溫泉旅館不同，這裡散發出一種活潑、適合探險的氛圍。<br>定山溪萬世閣的泉質屬於「鈉氯化物泉(低滲中性溫泉)」，最大的特點是「保溫效果極佳」，泉水中的鹽分會附著在皮膚上，防止汗水蒸發，因此泡完後身體會長時間保持溫熱，非常適合改善手腳冰冷、神經痛或關節痛。<br>【晚餐】自助餐「Season fair」，特色是招牌石窯現烤披薩<br>【房型】兩間雙連房。<br>MapCode: 708 755 362*52", 
+                        time: "住宿", icon: "fa-hot-tub-person", title: "【絲路風情與北國溫泉的交匯】", location: "定山溪萬世閣酒店 Milione", 
+                        content: [{ text: "這間飯店的名字「Milione」源自馬可·波羅的綽號，象徵著「百萬次的感動與旅程」。這座飯店是萬世閣集團旗下的經典之作，以其寬敞的空間與豐富的服務聞名。室內設計巧妙地融入了「絲路」的主題，大廳挑高且充滿異國情調。與一般傳統溫泉旅館不同，這裡散發出一種活潑、適合探險的氛圍。<br>定山溪萬世閣的泉質屬於「鈉氯化物泉(低滲中性溫泉)」，最大的特點是「保溫效果極佳」，泉水中的鹽分會附著在皮膚上，防止汗水蒸發，因此泡完後身體會長時間保持溫熱，非常適合改善手腳冰冷、神經痛或關節痛。<br>【晚餐】自助餐「Season fair」，特色是招牌石窯現烤披薩<br>【房型】兩間雙連房。<br>MapCode: 708 755 362*52", image: "" }],
                         links: [
                             { url: "https://www.milione.jp/", title: "官網" },
                             { url: "https://www.milione.jp/spa/", title: "溫泉" }
@@ -303,16 +339,20 @@
                 guideNotes: "<p></p><ul><li><strong>北國優駿公園：</strong>快樂小馬秀、觀光馬車、騎馬體驗；名馬「大震撼」/「春秋分」雕像、「自由島」之墓。</li><li><strong>唐吉訶德 千歲店：</strong>大買特買。</li><li><strong>店家待定：</strong>燒肉/羊肉吃到飽。</li></ul>",
                 activities: [
                     { 
-                        time: "上午", icon: "fa-horse", title: "【與名馬共舞的綠色奇蹟】", location: "北國優駿公園 Northern Horse Park", note: "這座公園由日本著名的賽馬育種集團 Northern Farm 經營，佔地高達 50 公頃。這裡的核心理念是「人、馬、自然」的共生。不同於一般的農場，這裡的馬兒大多受過專業訓練，甚至有許多是叱吒賽馬場的傳奇名馬退役後在此頤養天年。<br>【快樂小馬秀】是公園最受歡迎的招牌演出！聰明的小馬會表演投籃、跳繩，甚至與馴馬師進行幽默互動。這不是那種高壓的馬戲團表演，而更像是一場充滿愛與信任的交流。<br>【名馬展示區】住著許多曾在國際賽事奪冠的退役賽馬。可以近距離觀察這些大地的運動員，感受牠們高貴優雅的氣質。<br>【觀光馬車】以最輕鬆、充滿異國貴族風情的方式遊覽這座 50 公頃的森林公園，坐在寬敞舒適的木製馬車上，由體型壯碩、溫馴的重型馬帶領。馬蹄踏在路面上的「喀噠、喀噠」聲，節奏感十足，配合兩旁四季更迭的林蔭大道，非常有歐式莊園的感覺。<br>【騎馬體驗】由專業工作人員牽著馬匹，繞行專門的圓形場地一圈。馬兒受過高度訓練，性格極其穩定。<br>【夏季純種馬指南(12:00 要預約)】工作人員會介紹 2-3 匹居住在北方馬場的退休賽馬<br>【推薦】馬油與馬蹄精品： 商店內販售高品質的純馬油護膚品，以及象徵「幸運」的馬蹄鐵相關飾品。此外，這裡也有許多只有在此才能買到的賽馬週邊商品，非常有收藏價值。<br>MapCode: 113 712 186*50", 
+                        time: "上午", icon: "fa-horse", title: "【與名馬共舞的綠色奇蹟】", location: "北國優駿公園 Northern Horse Park", 
+                        content: [{ 
+                            text: "這座公園由日本著名的賽馬育種集團 Northern Farm 經營，佔地高達 50 公頃。這裡的核心理念是「人、馬、自然」的共生。不同於一般的農場，這裡的馬兒大多受過專業訓練，甚至有許多是叱吒賽馬場的傳奇名馬退役後在此頤養天年。<br>【快樂小馬秀】是公園最受歡迎的招牌演出！聰明的小馬會表演投籃、跳繩，甚至與馴馬師進行幽默互動。這不是那種高壓的馬戲團表演，而更像是一場充滿愛與信任的交流。<br>【名馬展示區】住著許多曾在國際賽事奪冠的退役賽馬。可以近距離觀察這些大地的運動員，感受牠們高貴優雅的氣質。<br>【觀光馬車】以最輕鬆、充滿異國貴族風情的方式遊覽這座 50 公頃的森林公園，坐在寬敞舒適的木製馬車上，由體型壯碩、溫馴的重型馬帶領。馬蹄踏在路面上的「喀噠、喀噠」聲，節奏感十足，配合兩旁四季更迭的林蔭大道，非常有歐式莊園的感覺。<br>【騎馬體驗】由專業工作人員牽著馬匹，繞行專門的圓形場地一圈。馬兒受過高度訓練，性格極其穩定。<br>【夏季純種馬指南(12:00 要預約)】工作人員會介紹 2-3 匹居住在北方馬場的退休賽馬<br>【推薦】馬油與馬蹄精品： 商店內販售高品質的純馬油護膚品，以及象徵「幸運」的馬蹄鐵相關飾品。此外，這裡也有許多只有在此才能買到的賽馬週邊商品，非常有收藏價值。<br>MapCode: 113 712 186*50", 
+                            image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000&auto=format&fit=crop" 
+                        }],
                         links: [
                             { url: "https://www.northern-horsepark.jp/guide/park_map/", title: "地圖" },
                             { url: "https://www.northern-horsepark.jp/horse/ponyshow/", title: "快樂小馬" },
                             { url: "https://www.northern-horsepark.jp/today/", title: "運營狀況" },
-                        ],
-                        image: "https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1000&auto=format&fit=crop" 
+                        ]
                     },
                     { 
-                        time: "下午", icon: "fa-cart-shopping", title: "【回國前的衝刺補給站】", location: "唐吉訶德 千歲店", note: "設有專區擺放北海道限定的零食（如白色戀人、薯條三兄弟、六花亭等熱門商品），有時甚至能找到市中心缺貨的限定口味。<br>這裡的藥妝櫃位非常齊全，從最新的人氣面膜、感冒藥到痠痛貼布一應俱全。【推薦】「北海道純馬油」系列，這在北國乾燥的氣候中是保濕聖品。大包裝的乾帆貝（干貝糖）、起司條以及各種口味的 KitKat 限定版。<br>MapCode: 113 723 358*44",
+                        time: "下午", icon: "fa-cart-shopping", title: "【回國前的衝刺補給站】", location: "唐吉訶德 千歲店", 
+                        content: [{ text: "設有專區擺放北海道限定的零食（如白色戀人、薯條三兄弟、六花亭等熱門商品），有時甚至能找到市中心缺貨的限定口味。<br>這裡的藥妝櫃位非常齊全，從最新的人氣面膜、感冒藥到痠痛貼布一應俱全。【推薦】「北海道純馬油」系列，這在北國乾燥的氣候中是保濕聖品。大包裝的乾帆貝（干貝糖）、起司條以及各種口味的 KitKat 限定版。<br>MapCode: 113 723 358*44", image: "" }],
                         links: [
                             { url: "#", title: "預留連結1" },
                             { url: "#", title: "預留連結2" },
@@ -320,13 +360,15 @@
                         ]
                     },
                     { 
-                        time: "下午", icon: "fa-basket-shopping", title: "燒肉/羊肉吃到飽", location: "待定", note: "還在研究吃哪家。<br>MapCode:TBD",
+                        time: "下午", icon: "fa-basket-shopping", title: "燒肉/羊肉吃到飽", location: "待定", 
+                        content: [{ text: "還在研究吃哪家。<br>MapCode:TBD", image: "" }],
                         links: [
                             { url: "#", title: "預留連結1" },
                         ]
                     },
                     { 
-                        time: "住宿", icon: "fa-hotel", title: "【家一般的舒適感與現代設計】", location: "Minn Chitose", note: "Minn Chitose 於 2022 年底開幕，是一間主打「公寓式」概念的飯店。室內裝潢採用極簡、充滿質感的現代日式風格。<br>每間客房都配備了完整的廚房（包含微波爐、冰箱、爐灶及餐具）與洗衣機。<br>MapCode: 113 762 138*14", 
+                        time: "住宿", icon: "fa-hotel", title: "【家一般的舒適感與現代設計】", location: "Minn Chitose", 
+                        content: [{ text: "Minn Chitose 於 2022 年底開幕，是一間主打「公寓式」概念的飯店。室內裝潢採用極簡、充滿質感的現代日式風格。<br>每間客房都配備了完整的廚房（包含微波爐、冰箱、爐灶及餐具）與洗衣機。<br>MapCode: 113 762 138*14", image: "" }],
                         links: [
                             { url: "https://staytuned.asia/ja/brands/minn/hotels/minn_chitose", title: "官網"},
                         ]
@@ -341,7 +383,8 @@
                 guideNotes: "<p></p><ul><li><strong>還車：</strong>請務必在還車前到指定的加油站加滿油。</li><li><strong>早餐：</strong>拉麵、烤羊肉、Royce、</li><li><strong>伴手禮：</strong>白色戀人、六花亭、札幌農學院</li></ul>",
                 activities: [
                     { 
-                        time: "9:00", icon: "fa-cart-shopping", title: "【美食與伴手禮的「總部」】", location: "新千歲機場", note: "來去新千歲機場吃早餐。<br>【國內線 2F/3F伴手禮】幾乎所有北海道知名的甜點，六花亭、北菓樓、LeTAO、美瑛選果的玉米麵包、札幌農學院新千歲機場工廠店。<br>【拉麵道場】位於 3 樓，集結了全北海道最強的拉麵名店(如：一幻蝦味拉麵)。<br>【Royce' Chocolate World】可以親眼看到生巧克力的全自動生產線，還能買到機場限定的巧克力麵包與周邊",
+                        time: "9:00", icon: "fa-cart-shopping", title: "【美食與伴手禮的「總部」】", location: "新千歲機場", 
+                        content: [{ text: "來去新千歲機場吃早餐。<br>【國內線 2F/3F伴手禮】幾乎所有北海道知名的甜點，六花亭、北菓樓、LeTAO、美瑛選果的玉米麵包、札幌農學院新千歲機場工廠店。<br>【拉麵道場】位於 3 樓，集結了全北海道最強的拉麵名店(如：一幻蝦味拉麵)。<br>【Royce' Chocolate World】可以親眼看到生巧克力的全自動生產線，還能買到機場限定的巧克力麵包與周邊", image: "" }],
                         links: [
                             { url: "https://www.hokkaido-airports.com/zh-CHT/new-chitose/spend/shop/buy/", title: "商店" },
                             { url: "https://www.hokkaido-airports.com/zh-CHT/new-chitose/spend/shop/eat/", title: "餐廳" },
@@ -349,7 +392,8 @@
                         ]
                     },
                     { 
-                        time: "12:05", icon: "fa-plane-departure", title: "飛往台灣 (IT235)", location: "新千歲機場", note: "預計 15:20 抵達桃園。",
+                        time: "12:05", icon: "fa-plane-departure", title: "飛往台灣 (IT235)", location: "新千歲機場", 
+                        content: [{ text: "預計 15:20 抵達桃園。", image: "" }],
                         links: [
                             { url: "https://ec-v2.tigerairtw.com/zh-tw/check-flight-status/", title: "航班動態"  },
                         ]
@@ -364,15 +408,16 @@
                 guideNotes: "<p><strong>穿搭建議：</strong>北海道五月日溫差極大，白天舒適但傍晚會降至 10 度以下。請務必攜帶防風、防水外套。</p>",
                 activities: [
                     { 
-                        time: "租車", icon: "fa-car", title: "Budget Rent a Car", location: "新千歲空港店", note: "MapCode: 113 770 666*66", 
+                        time: "租車", icon: "fa-car", title: "Budget Rent a Car", location: "新千歲空港店", 
+                        content: [{ text: "MapCode: 113 770 666*66", image: "" }],
                         links: [
                             { url: "https://www.budgetrentacar.co.jp/zh/shop/hokkaido/0700/", title: "Budget 官網" },
                         ] 
                     },
                     { 
-                        time: "機票", icon: "fa-ticket", title: "虎航 IT234 / IT235", location: "桃園 <-> 新千歲", note: "5/20 6:20-11:05；5/24 12:05-15:20",
-                        links: [
-                        ]
+                        time: "機票", icon: "fa-ticket", title: "虎航 IT234 / IT235", location: "桃園 <-> 新千歲", 
+                        content: [{ text: "5/20 6:20-11:05；5/24 12:05-15:20", image: "" }],
+                        links: []
                     },
                 ]
             }
@@ -380,7 +425,7 @@
 
         // 座標對照表 (氣象預報用)
         const locationCoords = {
-            "default": { lat: 43.0611, lon: 141.3544 },
+            "default": { lat: 43.0611, lon: 141.3544 }, // 札幌
             "新千歲": { lat: 42.7752, lon: 141.6923 },
             "登別": { lat: 42.4920, lon: 141.1444 },
             "洞爺": { lat: 42.5925, lon: 140.8525 },
@@ -400,6 +445,7 @@
         const guideNotes = document.getElementById('guide-notes');
         const headerDate = document.getElementById('header-date');
 
+        // 天氣 API
         async function fetchRealWeather(locationName, elementId) {
             let coords = locationCoords["default"];
             for (const key in locationCoords) {
@@ -469,6 +515,25 @@
                     const weatherId = `weather-${index}-${idx}`;
                     let mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(activity.location)}`;
                     
+                    // 生成多段內容 (Text + Image)
+                    let activityContentHtml = '';
+                    if (activity.content && Array.isArray(activity.content)) {
+                        activity.content.forEach(segment => {
+                            activityContentHtml += `
+                                <div class="mb-4 last:mb-0">
+                                    <div class="mb-3 leading-relaxed p-3 border-l-2 rounded-r-lg" style="font-size: var(--note-font-size); line-height: 1.6; border-color: var(--primary-color); background-color: rgba(224, 67, 112, 0.05); color: var(--text-sub);">
+                                        ${segment.text}
+                                    </div>
+                                    ${segment.image ? `
+                                    <div class="mb-3 overflow-hidden rounded-lg shadow-sm border border-gray-100">
+                                        <img src="${segment.image}" class="w-full h-auto object-cover max-h-64" alt="行程圖片" onerror="this.style.display='none'">
+                                    </div>
+                                    ` : ''}
+                                </div>
+                            `;
+                        });
+                    }
+
                     html += `
                         <div class="relative flex gap-4 fade-in ${isLast ? 'last-item' : ''}" style="animation-delay: ${idx * 0.1}s">
                             <div class="flex flex-col items-center">
@@ -490,15 +555,7 @@
                                     <i class="fa-solid fa-location-dot opacity-50 text-xs"></i> ${activity.location}
                                 </p>
                                 
-                                <div class="mb-4 leading-relaxed p-3 border-l-2 rounded-r-lg" style="font-size: var(--note-font-size); line-height: 1.6; border-color: var(--primary-color); background-color: rgba(224, 67, 112, 0.05); color: var(--text-sub);">
-                                    ${activity.note}
-                                </div>
-
-                                ${activity.image ? `
-                                <div class="mb-4 overflow-hidden rounded-lg shadow-sm border border-gray-100">
-                                    <img src="${activity.image}" class="w-full h-auto object-cover max-h-48" alt="${activity.title}" onerror="this.style.display='none'">
-                                </div>
-                                ` : ''}
+                                ${activityContentHtml}
 
                                 <div class="flex flex-wrap gap-2 mt-auto">
                                     <a href="${mapUrl}" target="_blank" class="nav-btn px-4 py-2 rounded-lg text-center font-bold flex items-center justify-center gap-2 hover:bg-gray-50 flex-grow" style="font-size: var(--meta-font-size);">
@@ -506,10 +563,11 @@
                                     </a>
                                     
                                     ${activity.links ? activity.links.map(link => `
+                                        ${(link.url && link.url !== '#') ? `
                                         <a href="${link.url}" target="_blank" class="nav-btn px-3 py-2 rounded-lg text-center flex items-center justify-center gap-1 hover:bg-gray-50" title="${link.title}">
                                             <i class="fa-solid fa-link" style="color: var(--primary-color);"></i>
                                             <span class="text-xs font-medium">${link.title}</span>
-                                        </a>
+                                        </a>` : ''}
                                     `).join('') : ''}
                                 </div>
                             </div>
